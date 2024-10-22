@@ -2,26 +2,26 @@ package org.example;
 
 import geometry2d.Circle;
 import geometry2d.Rectangle;
+import geometry3d.Cylinder;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("\tRectangle");
-        Rectangle rec = new Rectangle(1, 1);
-        double perimetr = rec.perimeter();
-        double area = rec.area();
-        System.out.println("Area of rectangle:        " + area);
-        System.out.println("Perimeter of rectangle:   " + perimetr);
+        double width = 6;
+        double length = 6;
+        Rectangle rectangle = new Rectangle(width, length);
+        System.out.println("\tRectangle:");
+        System.out.println(rectangle);
 
+        double radius = 3;
+        Circle circle = new Circle(radius);
+        System.out.println("\tCircle:");
+        System.out.println(circle);
 
-        System.out.println("\n\tCircle");
-        Circle cir = new Circle(2);
-        double per = cir.perimeter();
-        double ar = cir.area();
-        System.out.println("Area of circle:           " + ar);
-        System.out.println("Perimeter of circle:      " + per);
+        double height = 4;
+        Cylinder cylinderCircle = new Cylinder(circle, height);
+        System.out.println("\tCylinder:");
+        System.out.println(cylinderCircle);
 
 
     }
